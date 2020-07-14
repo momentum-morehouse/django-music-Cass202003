@@ -16,14 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.conf import settings
 from django.urls import include, path
+from album import views as album_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-]
+  path('', album_views.list_albums, name='home')]
 
-if settings.DEBUG:
-    import debug_toolbar
-    urlpatterns = [
+if settings.DEBUG: False
+import debug_toolbar
+urlpatterns = [
         path('__debug__/', include(debug_toolbar.urls)),
 
         # For django versions before 2.0:

@@ -17,7 +17,7 @@ import environ
 
 env = environ.Env(
     # set casting, default value
-    DEBUG=(bool, False),)
+    DEBUG=(bool, True),)
 environ.Env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / ...
@@ -30,9 +30,10 @@ BASE_DIR = Path(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['django-music-cass202003.cass2020.repl.co','django-music-cass202003--cass2020.repl.co'
+]
 
 # Application definition
 
