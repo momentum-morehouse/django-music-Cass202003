@@ -30,7 +30,7 @@ BASE_DIR = Path(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['django-music-cass202003.cass2020.repl.co','django-music-cass202003--cass2020.repl.co'
 ]
@@ -51,6 +51,7 @@ INSTALLED_APPS = [
 
     # Project-specific
     'users',
+    'album'
 ]
 
 MIDDLEWARE = [

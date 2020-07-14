@@ -1,10 +1,10 @@
 from django.shortcuts import render
 from django.db import models
-from .models import Albums
+from .models import Album
 
-def index(request):
+def list_albums(request):
     albums = Album.objects.all()
-    return render(request, "albums/list_albums.html",
+    return render(request, "album/list_album.html",
                   context={"albums": albums})
 
 # def add_album(request):
@@ -16,7 +16,7 @@ def index(request):
 #             list.save()
 #             return redirect(to='album_list')
 
-#     return render(request, "albums/add_album.html", {"list: list"})
+#     return render(request, "album/add_album.html", {"list: list"})
 
 
 # def edit_album(request, pk):
@@ -29,7 +29,7 @@ def index(request):
 #             list.save()
 #             return redirect(to='album_list')
 
-#     return render(request, "albums/add_album.html", {"list": list)
+#     return render(request, "album/add_album.html", {"list": list)
                 
 
     
