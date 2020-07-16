@@ -38,6 +38,7 @@ ALLOWED_HOSTS = ['django-music-cass202003.cass2020.repl.co','django-music-cass20
 # Application definition
 
 INSTALLED_APPS = [
+    'registration',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -140,3 +141,6 @@ INTERNAL_IPS = [
     '127.0.0.1',
     # ...
 ]
+
+LOGIN_REDIRECT_URL = '/album'
+SIMPLE_BACKEND_REDIRECT_URL = '/album'
